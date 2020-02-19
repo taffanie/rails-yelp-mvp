@@ -1,0 +1,9 @@
+<h1>Review Form</h1>
+
+<%= simple_form_for ([@restaurant, @review]) do |f| %>
+  <%= f.input :content, placeholder: "Write review here..." %>
+  <%= f.input :rating, collection: (0..5) %>
+  <%= f.submit "Post review!" %>
+<% end %>
+
+<!-- <form action="/restaurants/1/reviews"></form> -->
